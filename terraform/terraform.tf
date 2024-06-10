@@ -1,7 +1,7 @@
 terraform {
   required_version = ">= 1.8.5"
 
-cloud {
+  cloud {
     organization = "aura-organisation"
 
     workspaces {
