@@ -12,7 +12,7 @@ resource "aws_route53_record" "wildcard" {
   name    = "*.auratest.dev"
   type    = "A"
   ttl     = "300"
-  records = [aws_eip.ec2_eip]
+  records = [aws_eip.ec2_eip.public_ip]
 }
 
 resource "aws_route53_record" "www" {
@@ -20,5 +20,5 @@ resource "aws_route53_record" "www" {
   name    = "auratest.dev"
   type    = "A"
   ttl     = "300"
-  records = [aws_eip.ec2_eip]
+  records = [aws_eip.ec2_eip.public_ip]
 }
