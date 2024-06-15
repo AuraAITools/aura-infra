@@ -13,6 +13,6 @@ resource "aws_iam_user_group_membership" "ecr_svc_user_membership" {
   user = aws_iam_user.ecr_svc_user.name
 
   groups = [
-    aws_iam_group.deployer_svc_user_group.name
+    aws_iam_group.deployer_svc_group.name
   ]
 }
