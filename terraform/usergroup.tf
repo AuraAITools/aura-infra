@@ -5,7 +5,7 @@ resource "aws_iam_group" "deployer_svc_group" {
 
 resource "aws_iam_group_policy_attachment" "deployer_svc_group_policy_attachment" {
   group      = aws_iam_group.deployer_svc_group.name
-  policy_arn = data.aws_iam_policy.ecr_push_pull_policy
+  policy_arn = data.aws_iam_policy.ecr_push_pull_policy.arn
 }
 
 // ecr service user deployer's user group membership
