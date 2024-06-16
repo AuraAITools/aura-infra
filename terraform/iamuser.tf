@@ -1,5 +1,5 @@
-resource "aws_iam_user" "ecr_svc_user" {
-  name = "ecr_svc_user"
+resource "aws_iam_user" "ecr_user" {
+  name = "ecr_user"
   path = "/system/"
 
   tags = {
