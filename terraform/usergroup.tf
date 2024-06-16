@@ -9,10 +9,10 @@ resource "aws_iam_group_policy_attachment" "ecr_svc_user_group_policy_attachment
 }
 
 // ecr service user deployer's user group membership
-# resource "aws_iam_user_group_membership" "ecr_user_membership" {
-#   user = aws_iam_user.ecr_user.name
+resource "aws_iam_user_group_membership" "ecr_user_group_membership" {
+  user = aws_iam_user.ecr_user.name
 
-#   groups = [
-#     aws_iam_group.ecr_svc_user_group.name
-#   ]
-# }
+  groups = [
+    aws_iam_group.ecr_svc_user_group.name
+  ]
+}
