@@ -48,7 +48,7 @@ resource "aws_security_group" "webserver_sg" {
     description = "Allow outbound SSL SMTP connection"
     from_port   = 465
     to_port     = 465
-    protocol    = "smtp"
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
